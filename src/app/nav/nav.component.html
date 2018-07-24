@@ -1,0 +1,20 @@
+<nav class="navbar navbar-inverse">  
+  <a class="navbar-brand" href="#">Project name</a>
+  
+  <ul class="nav navbar-nav">
+      <li><a href="#Matches">Matches</a></li>
+      <li><a href="#Lists">Lists</a></li>
+      <li><a href="#Messages">Messages</a></li>
+  </ul>
+  
+  <form #loginForm="ngForm" class="navbar-form navbar-right" (ngSubmit)="login()">
+    <div class="form-group">
+      <input type="text" name="username" placeholder="Username" class="form-control" required [(ngModel)]="model.username">
+    </div>
+    <div class="form-group">
+      <input type="password" name="password" placeholder="Password" class="form-control" required [(ngModel)]="model.password">
+    </div>
+    <button [disabled]="!loginForm.valid" type="submit" class="btn btn-success">Login</button>
+  </form>
+
+</nav>
